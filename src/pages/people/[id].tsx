@@ -9,7 +9,7 @@ import Link from 'next/link';
 const IMG_URL = 'https://picsum.photos/200/200';
 const API_BASE = 'https://swapi.dev/api';
 
-export default function PersonPage({ person, homeworld }: { person: Person, homeworld: Homeworld }) {
+export default function PersonPage({ person, homeworld }: { person: Person; homeworld: Homeworld }) {
   const datePersonCreated = React.useMemo(() => Strings.formatDate(person.created), [person.created]);
   const homeworldPopulation = React.useMemo(() => Strings.formatNumber(homeworld.population), [homeworld.population]);
   const homeworldDiameter = React.useMemo(() => Strings.formatNumber(homeworld.diameter), [homeworld.diameter]);
@@ -17,9 +17,11 @@ export default function PersonPage({ person, homeworld }: { person: Person, home
   return (
     <>
       <Head>
-        <title>Person | SwapiDataExplorer</title>
+        <title>Person | SwapiExplorer</title>
       </Head>
-      <Link href="/" className="inline-block p-2 pl-0">← Back</Link>
+      <Link href="/" className="inline-block p-2 pl-0">
+        ← Back
+      </Link>
       <figure className="flex flex-row items-start gap-8 w-max mx-auto mt-2">
         <div>
           <h1 className="text-4xl font-semibold">{person.name}</h1>
@@ -53,7 +55,7 @@ export default function PersonPage({ person, homeworld }: { person: Person, home
 }
 
 export async function getServerSideProps({ query }: GetServerSidePropsContext) {
-  const { data: person }  = await axios.get<Person>(`${API_BASE}/people/${query.id}`);
+  const { data: person } = await axios.get<Person>(`${API_BASE}/people/${query.id}`);
 
   const { data: homeworld } = await axios.get<Homeworld>(`${person.homeworld}`);
 

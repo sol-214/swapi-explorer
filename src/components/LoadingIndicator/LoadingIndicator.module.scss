@@ -1,0 +1,21 @@
+.loading {
+    @apply fixed inset-x-0 top-0;
+
+        @apply bg-gradient-to-r from-indigo-500 to-blue-600 h-1;
+        animation: 1.5s loading linear infinite alternate;
+
+        @keyframes loading {
+            0% {
+                left: 0;
+                right: 100%;
+            }
+            50% {
+                left: 0;
+                right: 0;
+            }
+            100% {
+                left: 100%;
+                right: 0;
+            }
+        }
+}

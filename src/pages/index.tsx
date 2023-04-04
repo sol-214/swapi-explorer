@@ -10,7 +10,7 @@ export default function IndexPage({ data }: { data: Res<Person[]> }) {
   return (
     <>
       <Head>
-        <title>SwapiDataExplorer</title>
+        <title>SwapiExplorer</title>
       </Head>
       <ul className="grid grid-cols-4 gap-4">
         {data.results.map((person) => (
@@ -25,7 +25,7 @@ export default function IndexPage({ data }: { data: Res<Person[]> }) {
 
 export async function getServerSideProps() {
   try {
-    const { data }  = await axios.get<Res<Person[]>>(`${API_BASE}/people`);
+    const { data } = await axios.get<Res<Person[]>>(`${API_BASE}/people`);
 
     return {
       props: { data },
