@@ -12,6 +12,6 @@ Open [http://localhost:3000](http://localhost:3000)
 
 # Snapshots
 
-<img src="/assets/snapshots/index.png" width="500" />
+<img src="/assets/snapshots/index.png" width="1100" />
 
-<img src="/assets/snapshots/person.png" width="500" />
+<img src="/assets/snapshots/person.png" width="1100" />
