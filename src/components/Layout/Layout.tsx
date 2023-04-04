@@ -16,11 +16,11 @@ export default function Layout({ children }: React.PropsWithChildren) {
       <header className="relative py-2 flex justify-between">
         <Link href="/">
           <h1 className="font-extrabold text-4xl bg-white flex items-center bg-clip-text text-transparent bg-gradient-to-r from-neutral-300 to-neutral-200">
-            SwapiDataExplorer v0.1
+            SwapiExplorer v0.1
           </h1>
         </Link>
         <button
-          className="py-2 px-4 border-2 rounded-lg border-neutral-200 hover:border-white hover:bg-white transition"
+          className="font-semibold py-2 px-4 border-2 rounded-lg border-neutral-200 hover:border-white hover:bg-white transition"
           type="button"
           onClick={handleLogoutClick}
         >
