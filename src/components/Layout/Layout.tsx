@@ -31,9 +31,7 @@ export default function Layout({ children }: React.PropsWithChildren) {
           </button>
         )}
       </header>
-      <main className="mt-8">
-        {children}
-      </main>
+      <main className="mt-8">{children}</main>
     </div>
   );
 }

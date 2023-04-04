@@ -37,7 +37,7 @@ export default function AuthPage() {
             type="submit"
             className="font-semibold px-6 py-4 border-2 rounded-lg border-neutral-200 hover:border-white hover:bg-white transition"
           >
-              Log in
+            Log in
           </button>
         </form>
       </main>
