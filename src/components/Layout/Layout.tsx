@@ -22,11 +22,7 @@ export default function Layout({ children }: React.PropsWithChildren) {
           </h1>
         </Link>
         {isLogoutVisible && (
-          <button
-            className="font-semibold py-2 px-4 border-2 rounded-lg border-neutral-200 hover:border-white hover:bg-white transition"
-            type="button"
-            onClick={handleLogoutClick}
-          >
+          <button className="btn-primary" type="button" onClick={handleLogoutClick}>
             Log out
           </button>
         )}

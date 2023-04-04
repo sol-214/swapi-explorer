@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .input {
+    @apply px-6 py-4 rounded-lg border-2 border-neutral-200 focus:border-neutral-300 focus:outline-none transition;
+  }
+
+  .btn-primary {
+    @apply font-semibold py-2 px-4 border-2 rounded-lg border-neutral-200 hover:border-white hover:bg-white transition;
+  }
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -31,12 +41,9 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 a {
